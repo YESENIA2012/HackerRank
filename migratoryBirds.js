@@ -21,9 +21,6 @@ function migratoryBirds(arr) {
       counter = counterType;
       species = typeBird;
     }
-    console.log(objectBirds);
-    console.log(counter);
-    console.log(counterType);
   });
 
   return species;
