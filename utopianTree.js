@@ -18,6 +18,6 @@ function utopianTree(n) {
   return height;
 }
 
-let resultado = utopianTree(n);
+let heightUtopianTree = utopianTree(n);
 
-console.log("Height", resultado);
+console.log("Height", heightUtopianTree);
