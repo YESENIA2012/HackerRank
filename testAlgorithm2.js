@@ -8,6 +8,7 @@ correctly. He also warns us that we will only pass arrays of at least three posi
 Make an algotithm that receives in the console a text with values (separate by commans) and prints 
 true in the console if tye values go up and down strictly, otherwise it prints false */
 /* let data = '1,2,3' */
+
 let data = "0,3,2,1";
 let arrayData = data.split(",");
 let result = null;
