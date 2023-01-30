@@ -11,12 +11,16 @@ true in the console if tye values go up and down strictly, otherwise it prints f
 
 let data = "0,3,2,1";
 let arrayData = data.split(",");
-arrayData.pop();
+
+if (arrayData.length >= 4) {
+  arrayData = arrayData.slice(0, 3);
+}
+
 let result = null;
 
-let firstElement = arrayData[0];
-let secondElement = arrayData[1];
-let thirdElement = arrayData[2];
+let firstElement = parseInt(arrayData[0]);
+let secondElement = parseInt(arrayData[1]);
+let thirdElement = parseInt(arrayData[2]);
 
 if (firstElement < secondElement && secondElement > thirdElement) {
   result = true;
