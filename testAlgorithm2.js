@@ -11,6 +11,7 @@ true in the console if tye values go up and down strictly, otherwise it prints f
 
 let data = "0,3,2,1";
 let arrayData = data.split(",");
+arrayData.pop();
 let result = null;
 
 let firstElement = arrayData[0];
