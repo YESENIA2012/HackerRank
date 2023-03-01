@@ -5,8 +5,8 @@ Note that the target sum has to be obtained by summing two different integers in
 you can't add a single integer to itself in order to obtain the target num
 You can assume that there will be at most one pair of numbers summing up to the target sum
  */
-const array = [15];
-const targetSum = 15;
+const array = [3, 5, -4, 8, 11, 1, -1, 6];
+const targetSum = 10;
 
 function getNumbers(array, targetSum) {
   let newArray = [];
@@ -14,13 +14,12 @@ function getNumbers(array, targetSum) {
   for (let counter = 0; counter < array.length; counter++) {
     let element = array[counter];
 
-    for (let counter2 = 0; counter2 < array.length; counter2++) {
+    for (let counter2 = counter + 1; counter2 < array.length; counter2++) {
       let element2 = array[counter2];
 
-      if (counter !== counter2) {
-        if (element + element2 == targetSum) {
-          newArray.push(element);
-        }
+      if (element + element2 == targetSum) {
+        newArray.push(element);
+        newArray.push(element2);
       }
     }
   }
