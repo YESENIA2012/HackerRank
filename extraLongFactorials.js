@@ -13,4 +13,4 @@ function extraLongFactorials(n) {
   return result;
 }
 
-console.log(extraLongFactorials(n));
+console.log("resutl", extraLongFactorials(n));
