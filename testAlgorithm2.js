@@ -9,23 +9,35 @@ Make an algotithm that receives in the console a text with values (separate by c
 true in the console if tye values go up and down strictly, otherwise it prints false */
 /* let data = '1,2,3' */
 
-let data = "0,3,2,1";
+let data = "1,2,3";
 let arrayData = data.split(",");
 
-if (arrayData.length >= 4) {
-  arrayData = arrayData.slice(0, 3);
+if (arrayData.length < 3) {
+  console.log(false);
+} else {
+  let counterUploads = 0;
+
+  for (let counter = 0; counter < arrayData.length; counter++) {
+    if (parseInt(arrayData[counter]) < parseInt(arrayData[counter + 1])) {
+      counterUploads++;
+    }
+  }
+
+  if (counterUploads == arrayData.length - 1) {
+    console.log(false);
+  } else {
+    let counterDowns = 0;
+
+    for (let counter = 2; counter < arrayData.length; counter++) {
+      if (parseInt(arrayData[1]) > parseInt(arrayData[counter])) {
+        counterDowns++;
+      }
+    }
+
+    if (counterDowns == arrayData.length - 2) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  }
 }
-
-let result = null;
-
-let firstElement = parseInt(arrayData[0]);
-let secondElement = parseInt(arrayData[1]);
-let thirdElement = parseInt(arrayData[2]);
-
-if (firstElement < secondElement && secondElement > thirdElement) {
-  result = true;
-} else if (firstElement < secondElement && secondElement < thirdElement) {
-  result = false;
-}
-
-console.log(result); // true

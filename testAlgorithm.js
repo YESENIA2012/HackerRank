@@ -11,9 +11,10 @@ let sheepData = [
   { name: "Noah", color: "blue" },
   { name: "Euge", color: "red" },
   { name: "Ki Na Ma", color: "red" },
+  { name: "bi ap na", color: "red" },
 ];
 let counterSheep = 0;
-let nameSheep = null;
+let nameSheeps = [];
 
 for (let counter = 0; counter < sheepData.length; counter++) {
   counterSheep++;
@@ -22,13 +23,10 @@ for (let counter = 0; counter < sheepData.length; counter++) {
 
   if (colorSheep == "red") {
     if (nameSheepLowerCase.includes("n") && nameSheepLowerCase.includes("a")) {
-      nameSheep = sheepData[counter].name;
+      nameSheeps.push(sheepData[counter].name);
     }
   }
 }
 
-console.log(nameSheep); //Ki Na Ma
-console.log(counterSheep); // 3
-
-/* console.log(name); // Ki Na Ma
-console.log(counterSheepRed); */
+console.log(nameSheeps); //Ki Na Ma
+console.log(nameSheeps.length); // 3
